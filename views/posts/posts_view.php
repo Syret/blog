@@ -8,10 +8,7 @@
                 <a href="#"><span class="label label -info">
                     <?=$tag['tag_name']?></span></a>
             <?endforeach?>
-            <span class="label">alice</span>
-            <span class="label">story</span>
-            <span class="label">blog</span>
-            <span class="label">personal</span>
+
         </div>
     </div>
     <?foreach ($comments as $comment): ?>
@@ -22,14 +19,15 @@
                         <img src="http://lorempixel.com/50/50/people/6" />
                     </div>
                     <div class="commentText">
-                        <?=$comment['comment_created']?>
                         <?=$comment['author']?>
                         <p><?=$comment['comment_text']?></p>
+                        <?=$comment['comment_created']?>
                     </div>
                 </li>
             </ul>
             <form class="form-inline" method="post" role="form">
                 <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Nimi" name="data[author]"/>
                     <input class="form-control" type="text" placeholder="Sinu kommentaar" name="data[comment_text]"/>
                 </div>
                 <div class="form-group">

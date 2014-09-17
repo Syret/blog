@@ -9,11 +9,13 @@
             <span class="badge badge-success">Posted 2012-07-02 20:47:04</span><div class="pull-right">
                 <?foreach($tags[$post['post_id']] as $tag):?>
                     <a href="#"><span class="label" style="background-color: #5bc0de"><?=$tag?></span></a><? endforeach?>
-                <span class="label">alice</span>
-                <span class="label">story</span>
-                <span class="label">blog</span>
-                <span class="label">personal</span>
             </div>
         </div>
     </div>
 <?endforeach?>
+<hr>
+<form method="post">
+    <input name="data[post_subject]" type="text" placeholder="Pealkiri"></input><br><br>
+    <textarea name="data[post_text]" placeholder="Sisu" cols="100" rows="10"></textarea><br><br>
+    <button class="btn btn-default">Postita</button>
+</form>

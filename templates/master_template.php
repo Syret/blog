@@ -47,6 +47,7 @@
                 <li <?=$controller=='posts' ? 'class="active"': ''?>><a href="<?=BASE_URL?>">Posts</a></li>
                 <li <?=$controller=='tags' ? 'class="active"': ''?>><a href="<?=BASE_URL?>tags">Tags</a></li>
                 <li <?=$controller=='users' ? 'class="active"': ''?>><a href="<?=BASE_URL?>users">Users</a></li>
+                <li><a href="<?= BASE_URL ?><?= $auth->logged_in == true? 'logout' : 'login' ?>"> <?=$auth->logged_in == true? 'logout' : 'login' ?></a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
 					<ul class="dropdown-menu">

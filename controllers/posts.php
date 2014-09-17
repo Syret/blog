@@ -28,10 +28,10 @@ class posts extends Controller{
     }
 
     function view_post(){
-        $data = $_POST[‘data’];
-       $data[‘post_id’] = $this->params[0];
-       $data[‘comment_author’] = ‘Lolita’;
-      insert(‘comment’, $data);
-}
+        $data = $_POST['data'];
+        $data['post_id'] = $this->params[0];
+        $data['author'] ='Klaabu';
+        INSERT('comment',$data);
+    }
 
 }
